@@ -13,6 +13,9 @@ services:
       ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
       NODE_ENV: ${NODE_ENV}
+    volumes:
+      - strapitest-config:/opt/app/config
+      - strapitest-uploads:/opt/app/public/uploads
     ports:
       - "1337:1337"
     depends_on:
@@ -28,7 +31,8 @@ services:
       POSTGRES_DB: ${DATABASE_NAME}
     ports:
       - "5432:5432"
-
+    volumes:
+      - strapitest-db:/var/lib/postgresql/data/
   strapitestAdminer:
     image: adminer
     restart: unless-stopped
@@ -38,3 +42,8 @@ services:
       - ADMINER_DEFAULT_SERVER=strapitestDB
     depends_on:
       - strapitestDB
+
+volumes:
+  strapitest-config:
+  strapitest-uploads:
+  strapitest-db:
