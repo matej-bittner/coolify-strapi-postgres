@@ -21,6 +21,7 @@ WORKDIR /opt/
 COPY --from=build /opt/node_modules ./node_modules
 WORKDIR /opt/app
 COPY --from=build /opt/app ./
+COPY config /opt/app/config
 ENV PATH /opt/node_modules/.bin:$PATH
 
 RUN chown -R node:node /opt/app
