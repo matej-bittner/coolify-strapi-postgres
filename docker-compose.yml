@@ -49,4 +49,4 @@ volumes:
   strapitest-uploads:
     name: strapitest-uploads
   strapitest-db:
-    name: strapitest-uploads
+    name: strapitest-db
