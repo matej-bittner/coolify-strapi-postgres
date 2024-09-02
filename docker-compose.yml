@@ -43,10 +43,4 @@ services:
     depends_on:
       - strapitestDB
 
-volumes:
-  strapitest-config:
-    name: strapitest-config
-  strapitest-uploads:
-    name: strapitest-uploads
-  strapitest-db:
-    name: strapitest-db
+
