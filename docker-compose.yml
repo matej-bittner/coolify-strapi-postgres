@@ -45,5 +45,8 @@ services:
 
 volumes:
   strapitest-config:
+    name: strapitest-config
   strapitest-uploads:
+    name: strapitest-uploads
   strapitest-db:
+    name: strapitest-uploads
