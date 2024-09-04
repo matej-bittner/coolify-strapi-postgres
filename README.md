@@ -1,3 +1,9 @@
+in development use postgress on docker ("docker compose up strapitestDB") and run strapi with "npm run develop"
+to run everything in docker "docker compose up", localhost will not display anything, need to use 127.0.0.1:1337
+
+
+
+
 # 🚀 Getting started with Strapi
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
